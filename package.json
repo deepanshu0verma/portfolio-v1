@@ -9,9 +9,9 @@
     "@testing-library/user-event": "^13.2.1",
     "@vercel/analytics": "^1.4.1",
     "add": "^2.0.6",
-    "react": "^19.0.0",
+    "react": "latest",
     "react-animate-on-scroll": "^2.1.5",
-    "react-dom": "^19.0.0",
+    "react-dom": "latest",
     "react-google-recaptcha": "^2.1.0",
     "react-intl": "^7.1.6",
     "react-router-dom": "^6.2.1",
@@ -48,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "engines": {
+  "node": ">=18.0.0"
+}
 }
