@@ -1,61 +1,64 @@
-import { Container } from './styles'
-import reactIcon from '../../assets/react-icon.svg'
-import linkedin from '../../assets/linkedin.svg'
-import githubIcon from '../../assets/github.svg'
-import whatsapp from '../../assets/whatsapp.svg'
-import telegram from '../../assets/telegram.svg'
-import instagramIcon from '../../assets/instagram.svg'
+import { Container } from "./styles";
+import {
+  instagramIcon,
+  githubIcon,
+  linkedinIcon,
+  reactIcon,
+  devIcon,
+  gmailIcon,
+} from "../Icons/Icons";
 
 export function Footer() {
+  const socialLinks = [
+    {
+      href: "https://www.linkedin.com/in/deepanshu-v-964126139/",
+      icon: linkedinIcon,
+      alt: "LinkedIn",
+    },
+    {
+      href: "https://github.com/deepanshu0verma",
+      icon: githubIcon,
+      alt: "GitHub",
+    },
+    {
+      href: "https://dev.to/deepanshu_verma_1543",
+      icon: devIcon,
+      alt: "Dev.to",
+    },
+    {
+      href: `mailto:${process.env.REACT_APP_EMAIL}`,
+      icon: gmailIcon,
+      alt: "Gmail",
+    },
+    {
+      href: "https://www.instagram.com/i_deepanshu_verma/",
+      icon: instagramIcon,
+      alt: "Instagram",
+    },
+  ];
+
   return (
     <Container className="footer">
       <a href="https://deepanshuverma.in" className="logo">
-        <span>www.deepanshu</span>
-        <span>verma.in</span>
+        <span>www.deepanshuverma.in</span>
       </a>
-      <div>
+      <div className="made-with">
         <p>
-          This Website was made with <img src={reactIcon} alt="React" />
-          {/* <span>❤️</span> */}
+          Built with <img src={reactIcon} alt="React" />
         </p>
       </div>
       <div className="social-media">
-        <a
-          href="w"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={linkedin} alt="Linkedin" />
-        </a>
-        <a
-          href="w"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={githubIcon} alt="GitHub" />
-        </a>
-        <a
-          href="https://api.whatsapp.com/send/?phone=%2B919630576848&text=Hello+Deepanshu"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={whatsapp} alt="Whatsapp" />
-        </a>
-        <a
-          href="w"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={telegram} alt="telegram" />
-        </a>
-        <a
-          href="w"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={instagramIcon} alt="Instagram" />
-        </a>
+        {socialLinks.map((link, index) => (
+          <a
+            key={index}
+            href={link.href}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={link.icon} alt={link.alt} />
+          </a>
+        ))}
       </div>
     </Container>
-  )
+  );
 }

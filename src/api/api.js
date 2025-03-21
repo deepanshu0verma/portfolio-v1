@@ -1,8 +1,7 @@
 import { showErrorToast, showSuccessToast } from "../util/toast";
 
-
 // Define Airtable constants
-const AIRTABLE_BASE_URL = "https://api.airtable.com/v0";
+const AIRTABLE_BASE_URL = process.env.REACT_APP_AIRTABLE_BASE_URL;
 const AIRTABLE_ACCESS_TOKEN = process.env.REACT_APP_AIRTABLE_ACCESS_TOKEN;
 const AIRTABLE_BASE_ID = process.env.REACT_APP_AIRTABLE_BASE_ID;
 const AIRTABLE_TABLE_NAME = process.env.REACT_APP_AIRTABLE_TABLE_NAME;
@@ -34,11 +33,10 @@ export const submitToAirtable = async (formData) => {
       );
     }
 
-    showSuccessToast("Form submitted successfully!"); // Show success toast on success
+    showSuccessToast("Thanks! Your message has been sent successfully.");
     return true;
   } catch (error) {
-    console.error("Error submitting to Airtable:", error);
-    showErrorToast("Failed to save submission"); // Show error toast on failure
+    showErrorToast("Oops! Something went wrong. Please try again later.");
     return false;
   }
 };

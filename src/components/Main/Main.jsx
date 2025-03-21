@@ -6,33 +6,40 @@ import { Contact } from "../Contact/Contact";
 import { Project } from "../Project/Project";
 
 // Import icons
-import nextIcon from "../../assets/next.svg";
-import retoolIcon from "../../assets/retool.svg";
-import htmlIcon from "../../assets/html-icon.svg";
-import cssIcon from "../../assets/css-icon.svg";
-import sassIcon from "../../assets/sass-icon.svg";
-import jsIcon from "../../assets/js-icon.svg";
-import nodeIcon from "../../assets/node-icon.svg";
-import reactIcon from "../../assets/react-icon.svg";
-import typescriptIcon from "../../assets/typescript-icon.svg";
-import vueIcon from "../../assets/vue-icon.svg";
-import boostrapIcon from "../../assets/bootstrap-icon.svg";
-import mysqlIcon from "../../assets/mysql-icon.svg";
+
+import {
+  cssIcon,
+  nextIcon,
+  retoolIcon,
+  htmlIcon,
+  sassIcon,
+  jsIcon,
+  nodeIcon,
+  reactIcon,
+  typescriptIcon,
+  bootstrapIcon,
+  mySqlIcon,
+  postgresSqlIcon,
+  mongoDbIcon,
+  materialUI,
+} from "../Icons/Icons";
 
 // Particle shape images configuration
 const particleImages = [
-  { src: boostrapIcon, width: 20, height: 20 },
+  { src: bootstrapIcon, width: 20, height: 20 },
   { src: cssIcon, width: 20, height: 20 },
   { src: nextIcon, width: 20, height: 20 },
   { src: retoolIcon, width: 20, height: 20 },
   { src: htmlIcon, width: 20, height: 20 },
   { src: jsIcon, width: 20, height: 20 },
-  { src: mysqlIcon, width: 20, height: 20 },
+  { src: mySqlIcon, width: 20, height: 20 },
   { src: nodeIcon, width: 20, height: 20 },
   { src: reactIcon, width: 20, height: 20 },
   { src: sassIcon, width: 20, height: 20 },
   { src: typescriptIcon, width: 20, height: 20 },
-  { src: vueIcon, width: 20, height: 20 },
+  { src: postgresSqlIcon, width: 20, height: 20 },
+  { src: mongoDbIcon, width: 20, height: 20 },
+  { src: materialUI, width: 20, height: 20 },
 ];
 
 // Particle configuration objects

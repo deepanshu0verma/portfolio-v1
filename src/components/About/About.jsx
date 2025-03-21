@@ -4,17 +4,18 @@ import ScrollAnimation from "react-animate-on-scroll";
 // Import all images at once using an object for better organization
 import {
   aboutMeImage,
-  htmlIcon,
-  cssIcon,
+  materialUI,
+  postgresSqlIcon,
   jsIcon,
   nodeIcon,
   reactIcon,
   typescriptIcon,
-  vueIcon,
-  boostrapIcon,
+  mySqlIcon,
+  mongoDbIcon,
   retoolIcon,
   nextIcon,
-} from "../Icons/Icons"; // You'll need to create this file to centralize imports
+} from "../Icons/Icons";
+import Tooltip from "../../util/tooltip";
 
 // Define skills data for better maintenance
 const skills = [
@@ -22,11 +23,11 @@ const skills = [
   { name: "Next", icon: nextIcon, delay: 0.12 },
   { name: "React", icon: reactIcon, delay: 0.13 },
   { name: "TypeScript", icon: typescriptIcon, delay: 0.14 },
-  { name: "Vue", icon: vueIcon, delay: 0.15 },
+  { name: "MySQL", icon: mySqlIcon, delay: 0.15 },
   { name: "Node", icon: nodeIcon, delay: 0.16 },
-  { name: "HTML", icon: htmlIcon, delay: 0.17 },
-  { name: "CSS", icon: cssIcon, delay: 0.18 },
-  { name: "Bootstrap", icon: boostrapIcon, delay: 0.19 },
+  { name: "MaterialUI", icon: materialUI, delay: 0.17 },
+  { name: "PostgreSql", icon: postgresSqlIcon, delay: 0.18 },
+  { name: "MongoDB", icon: mongoDbIcon, delay: 0.19 },
   { name: "JavaScript", icon: jsIcon, delay: 0.19 },
 ];
 
@@ -40,7 +41,9 @@ const AnimatedText = ({ children, delay = 0 }) => (
 const SkillIcon = ({ skill }) => (
   <div className="hability">
     <ScrollAnimation animateIn="fadeInUp" delay={skill.delay * 1000}>
-      <img src={skill.icon} alt={skill.name} />
+      <Tooltip id="tooltip2" text={skill.name}>
+        <img src={skill.icon} alt={skill.name} />
+      </Tooltip>
     </ScrollAnimation>
   </div>
 );
@@ -56,33 +59,34 @@ export function About() {
         <AnimatedText delay={0.1}>
           <p>
             Hello! I’m Deepanshu, a MERN stack developer passionate about
-            building dynamic, high-performance web applications. With expertise
-            in MongoDB, Express.js, React, Node.js, Next.js, MySQL, and more, I
-            craft tailored digital solutions that bring your ideas to life.
+            developing high-performance, dynamic web-based applications. With
+            experience in MongoDB, Express.js, React, Node.js, Next.js, MySQL,
+            and many more, I create customized digital solutions that turn your
+            visions into reality.
           </p>
         </AnimatedText>
 
         <AnimatedText delay={0.2}>
           <p style={{ marginTop: "2rem", marginBottom: "2rem" }}>
             Beyond the MERN stack, I’m skilled in leveraging cutting-edge
-            technologies like Next.js for seamless front-end experiences and
+            technologies such as Next.js for smooth front-end experiences and
             MySQL for robust data management. I’m also committed to continuous
-            learning, always exploring new tools and techniques to stay ahead in
-            the ever-evolving tech world.
+            learning, continually finding new tools and methods to remain at the
+            forefront of the ever-evolving tech world.
           </p>
         </AnimatedText>
 
         <AnimatedText delay={0.3}>
           <p>
-            Whether you need a stunning new website, a powerful web app, or a
-            complete overhaul of your online presence, I’d love to collaborate
-            with you. Let’s connect and turn your vision into a reality with
-            innovative, future-ready solutions!
+            Whether you require a beautiful new website, a robust web
+            application, or a complete overhaul of your online presence, I’d
+            love to collaborate with you. Let's connect and make your dream come
+            true with innovative, future-proof solutions!
           </p>
         </AnimatedText>
 
         <AnimatedText delay={0.4}>
-          <h3>Here are my main skills:</h3>
+          <h3>Explore My Core Strengths:</h3>
         </AnimatedText>
 
         <div className="hard-skills">

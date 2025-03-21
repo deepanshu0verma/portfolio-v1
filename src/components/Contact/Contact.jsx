@@ -1,29 +1,50 @@
 import { Container } from "./styles";
 import emailIcon from "../../assets/email-icon.svg";
-import phoneIcon from "../../assets/phone-icon.svg"
+import phoneIcon from "../../assets/phone-icon.svg";
 import { Form } from "../Form/Form";
 
+export function Contact() {
+  const contactMethods = [
+    {
+      href: `mailto:${process.env.REACT_APP_EMAIL}`,
+      icon: emailIcon,
+      alt: "Email",
+      text: "Start a Conversation",
+    },
+    {
+      href: `tel:${process.env.REACT_APP_PHONE}`,
+      icon: phoneIcon,
+      alt: "Phone No",
+      text: "Reach Out Now",
+    },
+  ];
 
-export function Contact(){
+  const handleClick = (href) => {
+    window.location.href = href;
+  };
 
-  return(
+  return (
     <Container id="contact">
       <header>
-        <h2>Contact</h2>
-        <p>Ready to get started on your project? </p>
-        <p>Contact me now for a Free consultation.</p>
+        <h2>Let’s Connect!</h2>
+        <p>Excited to kick off your next big project?</p>
+        <p>Reach out today for a free, no-pressure consultation!</p>
       </header>
+
       <div className="contacts">
-        <div>
-        <a href="mailto:vermadeepanshu4334@gmail.com"><img src={emailIcon} alt="Email" /></a> 
-          <a href="mailto:vermadeepanshu4334@gmail.com">Mail Me</a>
-        </div>
-        <div>
-        <a href="tel:+918626909343"><img src={phoneIcon} alt="Phone No" /></a>
-          <a href="tel:+918626909343">Call Me</a>
-        </div>  
+        {contactMethods.map((method, index) => (
+          <button
+            key={index}
+            className="contact-item"
+            onClick={() => handleClick(method.href)}
+          >
+            <img src={method.icon} alt={method.alt} />
+            <span>{method.text}</span>
+          </button>
+        ))}
       </div>
-      <Form/>
+
+      <Form />
     </Container>
-  )
+  );
 }

@@ -19,7 +19,7 @@ export function Form() {
     "guerrillamail.com",
   ];
 
-  function verifyEmail(email: string) {
+  function verifyEmail(email) {
     if (!validator.isEmail(email)) {
       setValidEmail(false);
       setEmailError("Please enter a valid email address");
