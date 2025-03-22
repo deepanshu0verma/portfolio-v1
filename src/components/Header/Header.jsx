@@ -1,14 +1,13 @@
-import { Container } from './styles';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { NavHashLink, HashLink } from 'react-router-hash-link';
-import { useState } from 'react';
-import Resume from '../../assets/Deepanshu_Resume.pdf';
+import { Container } from "./styles";
+import { BrowserRouter as Router } from "react-router-dom";
+import { NavHashLink, HashLink } from "react-router-hash-link";
+import { useState } from "react";
+import Resume from "../../assets/Deepanshu_Resume.pdf";
 
 export function Header() {
   const [isActive, setActive] = useState(false);
 
-  const toggleTheme = () =>
-    document.documentElement.classList.toggle('light');
+  const toggleTheme = () => document.documentElement.classList.toggle("light");
 
   const closeMenu = () => setActive(false);
 
@@ -31,10 +30,10 @@ export function Header() {
         />
         <label htmlFor="switch">Toggle</label>
 
-        <nav className={isActive ? 'active' : ''}>
-          {['#home', '#about', '#project', '#contact'].map((hash, index) => (
+        <nav className={isActive ? "active" : ""}>
+          {["#home", "#about", "#project", "#contact"].map((hash, index) => (
             <NavHashLink key={index} smooth to={hash} onClick={closeMenu}>
-              {hash.replace('#', '').replace(/^\w/, (c) => c.toUpperCase())}
+              {hash.replace("#", "").replace(/^\w/, (c) => c.toUpperCase())}
             </NavHashLink>
           ))}
           <a href={Resume} download className="button">
@@ -43,10 +42,10 @@ export function Header() {
         </nav>
 
         <div
-          aria-expanded={isActive ? 'true' : 'false'}
+          aria-expanded={isActive ? "true" : "false"}
           aria-haspopup="true"
-          aria-label={isActive ? 'Close menu' : 'Open menu'}
-          className={`menu ${isActive ? 'active' : ''}`}
+          aria-label={isActive ? "Close menu" : "Open menu"}
+          className={`menu ${isActive ? "active" : ""}`}
           onClick={toggleMenu}
         ></div>
       </Router>

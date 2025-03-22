@@ -51,6 +51,27 @@ export const Container = styled.header`
     }
   }
 
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--pink); /* Use the same pink as the Resume button */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px; /* Match the rounded style of the Resume button */
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: filter 0.25s;
+
+    &:hover {
+      filter: brightness(0.6); /* Match the hover effect of other links */
+    }
+  }
+
   .menu-container {
     cursor: pointer;
     padding: 0.6rem 0;
@@ -59,8 +80,7 @@ export const Container = styled.header`
   .menu {
     width: 2rem;
     height: 0.2rem;
-    background: #ffff obtuvo
-
+    background: #ffff; /* Fixed the typo */
     position: relative;
     cursor: pointer;
     display: none;
@@ -120,12 +140,13 @@ export const Container = styled.header`
     border-radius: 100px;
     position: relative;
     margin-left: auto;
-    right: 10px;
+    margin-right: 1rem; /* Add margin to space it from the hamburger menu */
   }
 
   @media only screen and (max-width: 800px) {
     label {
       position: relative;
+      margin-right: 1rem; /* Ensure consistent spacing on smaller screens */
     }
   }
 
@@ -180,9 +201,16 @@ export const Container = styled.header`
       left: 0;
       transition: opacity 0.25s;
       background-color: var(--green);
+      padding: 2rem; /* Add padding to give space around the links */
+
+      a {
+        font-size: 1.5rem; /* Larger font size for better readability on mobile */
+        padding: 1rem; /* Larger tap area for links */
+      }
 
       a.button {
         background-color: var(--pink);
+        padding: 0.8rem 2rem; /* Slightly larger padding for the Resume button */
       }
 
       &.active {
