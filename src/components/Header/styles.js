@@ -180,6 +180,12 @@ export const Container = styled.header`
   @media (max-width: 960px) {
     padding: 1.8rem 3rem;
 
+
+    .logo {
+      font-size: 15px; /* Reduced font size to fit in one line */
+      gap: 4px;
+    }
+
     .menu {
       display: block;
     }
