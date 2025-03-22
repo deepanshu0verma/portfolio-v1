@@ -27,7 +27,7 @@ export const projects = [
     title: "StageLynk",
     description:
       "Developed a dynamic event coordination platform using Next.js for a fast and SEO-friendly frontend, Prisma for streamlined database interactions, and PostgreSQL for scalable data management. Implemented features like event scheduling, participant management, and real-time collaboration tools, enhancing connectivity for organizers and attendees.",
-    tech: ["Nextjs", "Prisma", "Postgresql", "Sharetribe"],
+    tech: ["Nextjs", "Prisma", "Sharetribe"],
     github: "",
     external: "https://stagelynk.com/",
   },

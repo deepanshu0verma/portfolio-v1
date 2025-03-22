@@ -1,5 +1,5 @@
 // icons.tsx
-import aboutMeImage from "../../assets/comp_logo.png";
+import aboutMeImage from "../../assets/deepanshu.png";
 import htmlIcon from "../../assets/html-icon.svg";
 import cssIcon from "../../assets/css-icon.svg";
 import jsIcon from "../../assets/js-icon.svg";

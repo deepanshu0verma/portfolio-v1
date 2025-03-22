@@ -12,6 +12,7 @@ export const Container = styled.footer`
 
   .logo{
     font-size: 2.8rem;
+    z-index: 1 !important;
   }
 
   p{
@@ -29,6 +30,7 @@ export const Container = styled.footer`
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    z-index: 1 !important;
 
     img,span{
       font-size: 3rem;

@@ -39,7 +39,7 @@ export function Footer() {
 
   return (
     <Container className="footer">
-      <a href="https://deepanshuverma.in" className="logo">
+      <a href="https://www.upwork.com/freelancers/~018ab55a3fef7932b7?viewMode=1" className="logo">
         <span>www.deepanshuverma.in</span>
       </a>
       <div className="made-with">
