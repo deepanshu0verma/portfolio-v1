@@ -42,9 +42,9 @@ export const projects = [
   {
     title: "Confidential Client Projects",
     description:
-      "Leveraging a diverse tech stack, I contributed to impactful, proprietary projects for previous employers. Due to Non-Disclosure Agreements (NDAs), specific details and public access are restricted. These experiences honed my skills in [mention 1-2 relevant areas, e.g., 'scalable architecture,' 'complex data modeling,' 'performance optimization'].",
-    tech: ["Varied Technologies", "Full-Stack Development", " "],
+      "Leveraging a diverse tech stack, I contributed to impactful, proprietary projects for previous employers. Due to Non-Disclosure Agreements (NDAs), specific details and public access are restricted. These experiences honed my skills in scalable architecture, complex data modeling, performance optimization.",
+    tech: ["Varied Technologies", "Full-Stack Development", "Cloud Solutions"],
     github: "",
     external: "",
-},
+  },
 ];
